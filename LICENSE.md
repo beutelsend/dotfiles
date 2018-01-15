@@ -1,4 +1,4 @@
-Dotfiles by meisterdieb
+# Dotfiles by meisterdieb
 
 To the extent possible under law, the person who associated CC0 with
 dotfiles has waived all copyright and related or neighboring rights
