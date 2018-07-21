@@ -130,4 +130,6 @@ dwiki() {
     links "https://de.wikipedia.org/wiki/Spezial:Suche?search=$encoded"
 }
 
-alias syu="pacaur -Syu"
+alias syu="pikaur -Syu"
+
+[[ -a ~/.wineenv ]] && source ~/.wineenv
