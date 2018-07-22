@@ -207,9 +207,9 @@ bar {
 
 #start of window title bars & borders section
 
-for_window [class="^.*"] border pixel 0
+# for_window [class="^.*"] border pixel 0
 
-gaps inner 5
+# gaps inner 5
 
 # green gruvbox
 # class                 border|backgr|text|indicator|child_border
@@ -229,8 +229,11 @@ client.urgent           $red $red $white $red $red
 
 #exec commands
 
-exec --no-startup-id /bin/bash ~/.fehb
-exec xrandr --output DVI-I-1 --auto --output DVI-D-0 --auto --right-of DVI-I-1
-exec compton -b -d :0 --config ~/.config/i3/compton.conf
-exec /usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh
+exec --no-startup-id /bin/bash ~/.fehbg
+#exec xrandr --output DVI-I-1 --auto --output DVI-D-0 --auto --right-of DVI-I-1
+exec nvidia-settings --assign CurrentMetaMode="DVI-I-1: nvidia-auto-select +0+0 {ForceCompositionPipeline=On, ForceFullCompositionPipeline=On}, DVI-D-0: nvidia-auto-select +1920+0 {ForceCompositionPipeline=On, ForceFullCompositionPipeline=On}"
+exec --no-startup-id compton -b -d :0 --config ~/.config/i3/compton.conf
+exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh
+exec --no-startup-id nextcloud
+exec --no-startup-id pasystray
 
